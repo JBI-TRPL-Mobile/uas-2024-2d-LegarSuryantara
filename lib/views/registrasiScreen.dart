@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'signupScreen.dart';
 
 class RegistrasiScreen extends StatelessWidget {
   @override
@@ -85,6 +86,7 @@ class ActionButton extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () {
+         
           },
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
@@ -106,6 +108,10 @@ class ActionButton extends StatelessWidget {
         SizedBox(width: 20),
         ElevatedButton(
           onPressed: () {
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SignupScreen()),
+            );
           },
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
