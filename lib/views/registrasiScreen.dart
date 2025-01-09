@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'signupScreen.dart';
+import 'signinScreen.dart';
 
 class RegistrasiScreen extends StatelessWidget {
   @override
@@ -34,7 +35,7 @@ class Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      "Aplikasi Pintar",
+      "Aplikasi Kasir Pintar",
       textAlign: TextAlign.center,
       style: TextStyle(
         fontSize: 24,
@@ -86,7 +87,10 @@ class ActionButton extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () {
-         
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SigninScreen()),
+            );
           },
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
